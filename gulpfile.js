@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
+var plumber = require('gulp-plumber');
 
 var browserSync = require('browser-sync').create();
 var reload = browserSync.reload;
@@ -16,6 +17,7 @@ gulp.task('serve', function() {
 
 gulp.task('html', function() {
   return gulp.src('src/pug/*.pug')
+    .pipe(plumber())
     .pipe(pug())
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.stream());
@@ -23,6 +25,7 @@ gulp.task('html', function() {
 
 gulp.task('css', function(){
   gulp.src('src/styles/style.scss')
+    .pipe(plumber())
     .pipe(sass({outputStyle: 'compressed'}))
     .pipe(autoprefixer({
             browsers: ['last 10 versions'],

@@ -1,0 +1,38 @@
+-var menuItems_desktop = [{ "name": "Новые поступления", "url": "#" },{ "name": "Распродажа", "url": "#" }];
+
+header.header
+  nav
+    ul.header__menu.header__menu--expanded
+      li.header__menu-item.header__menu-item--logo
+        a.header__menu-link.header__menu-link--logo(href="index.html") 
+          span.visually-hidden Mishka          
+          .header__logo.header__logo--mobile
+            include ../../img/logos/logo-mobile.svg
+          .header__logo.header__logo--tablet
+            include ../../img/logos/logo-tablet.svg
+          .header__logo.header__logo--desktop
+            include ../../img/logos/logo-desktop.svg
+        a(href="#")#menu-toggle.header__menu-toggle.header__menu-expand--show
+          svg(width="20.514" height="20.512").header__toggle-close
+            use(xlink:href="#icon-menu-close")
+          svg(width="19.958" height="14").header__toggle-open
+            use(xlink:href="#icon-menu-open")
+      li.header__menu-item
+          a.header__menu-link(href="catalog.html") Каталог товаров
+      li.header__menu-item
+          a.header__menu-link(href="order.html") Вязание на заказ
+      li.header__menu-item.header__menu-item--search
+        a.header__menu-link.header__menu-link--search(href="#")
+          span Поиск по сайту
+          svg(width="18" height="18").header__search-icon
+            use(xlink:href="#icon-search")
+      li.header__menu-item
+        a.header__menu-link.header__menu-link--cart(href="#") Корзина: пока пуста
+      li.header__menu-item.header__menu-item--tablet
+        span.header__menu-text Бесплатная доставка по России
+      each val in menuItems_desktop
+        li.header__menu-item.header__menu-item--desktop
+          a.header__menu-link(href=val.url)= val.name
+        
+ 
+          

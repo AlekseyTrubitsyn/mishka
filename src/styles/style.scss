@@ -1,3 +1,28 @@
-@import "./fonts.scss";
+@import "./_fonts.scss";
+@import "./_variables.scss";
+@import "./_mixinis.scss";
+@import "./components/header.scss";
 
 * { box-sizing: border-box; }
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+    margin: 0 auto;
+  }
+}
