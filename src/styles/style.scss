@@ -2,6 +2,7 @@
 @import "./_variables.scss";
 @import "./_mixinis.scss";
 @import "./components/header.scss";
+@import "./components/footer.scss";
 
 * { box-sizing: border-box; }
 
@@ -19,6 +20,8 @@ li {
 .container {
   width: 100%;
 }
+
+svg { color: black; }
 
 @media (min-width: $desktop-width) {
   .container {

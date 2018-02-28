@@ -4,7 +4,6 @@
 
 $base-padding: 20px;
 $left-mobile-padding: 76px;
-$border: 1px solid $mid-grey;
 
 .header {
   background: $light-grey;
@@ -107,7 +106,7 @@ $border: 1px solid $mid-grey;
 .header__search-icon { display: none; }
 
 @media (min-width: $tablet-width) {
-  $header-outside-padding: 50px;
+  $outside-padding: 50px;
 
   .header,
   .header__menu-item { background: white; }
@@ -201,21 +200,21 @@ $border: 1px solid $mid-grey;
 
   .header__menu-link--cart {
     padding-left: 80px;
-    padding-right: $header-outside-padding;
+    padding-right: $outside-padding;
   }
 
   .header__menu-item:nth-of-type(2) .header__menu-link {
-    padding-left: $header-outside-padding;
+    padding-left: $outside-padding;
   }
 
   .header__menu-item:nth-of-type(6) .header__menu-text {
-    padding-right: $header-outside-padding;
+    padding-right: $outside-padding;
     text-align: right;
   }
 }
 
 @media (min-width: $desktop-width) {
-  $top-inner-blocks-width: 598px;
+  $top-inner-blocks-width: 600px;
   $top-left-outer: 234;
   $top-right-outer: 316;
 
@@ -231,7 +230,7 @@ $border: 1px solid $mid-grey;
   @mixin top-right-block-width {
     $top-right-outer-ratio: $top-right-outer / ($top-left-outer + $top-right-outer);
 
-    width: calc((100% - #{$top-inner-blocks-width}) * #{$top-right-outer-ratio});
+    width: calc((100% - #{$top-inner-blocks-width}) * #{$top-right-outer-ratio);
 
     & .header__menu-link { justify-content: flex-start; }
   }
@@ -247,6 +246,10 @@ $border: 1px solid $mid-grey;
   .header__menu-item--desktop,
   .header__menu--expanded .header__menu-item--desktop {
     display: inline-block;
+  }
+
+  .header__menu-item {
+    flex-shrink: 0;
   }
 
   .header__menu-item:nth-of-type(1) { order: 3; }
@@ -276,6 +279,9 @@ $border: 1px solid $mid-grey;
     font-size: 17px;
   }
 
+  .header__menu-item:nth-of-type(3) {
+    width: 228px;
+  }
   .header__menu-item:nth-of-type(3),
   .header__menu-item:nth-of-type(4) {
     border-left: $border;
@@ -314,6 +320,11 @@ $border: 1px solid $mid-grey;
     font-size: 15px;
   }
 
+  .header__menu-item:nth-of-type(2) .header__menu-link,
+  .header__menu-item:nth-of-type(7) .header__menu-link {
+    padding-left: $outside-padding;
+  }
+
   .header__menu-item:nth-of-type(8) .header__menu-link {
     padding-left: 37px;
   }
@@ -332,7 +343,7 @@ $border: 1px solid $mid-grey;
   }
 
   .header__menu-item:nth-of-type(6) .header__menu-text {
-  	padding-left: 36px;
+  	padding-left: 35px;
   	text-align: left;
   }
 }

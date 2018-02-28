@@ -1,3 +1,7 @@
+@import "./_colors.scss";
+
+$border: 1px solid $mid-grey;
+
 @mixin visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -10,12 +14,17 @@
 }
 
 @mixin icon-hover {
-
   &:hover a {
     opacity: 1;
 
     & svg {
       color: $green;
     }
+  }
+}
+
+@mixin link-icon-hover {
+  &:hover svg {
+    color: $green;
   }
 }
