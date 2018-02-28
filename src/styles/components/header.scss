@@ -215,22 +215,18 @@ $left-mobile-padding: 76px;
 
 @media (min-width: $desktop-width) {
   $top-inner-blocks-width: 600px;
-  $top-left-outer: 234;
-  $top-right-outer: 316;
+  $top-left-outer: 234px;
+  $top-right-outer: 316px;
 
   @mixin top-left-block-width {
-    $top-left-outer-ratio: $top-left-outer / ($top-left-outer + $top-right-outer);
-
-    width: calc((100% - #{$top-inner-blocks-width}) * #{$top-left-outer-ratio});
+    width: calc((100% - #{$desktop-width}) / 2 + #{$top-left-outer});
     text-align: right;
 
     & .header__menu-link { justify-content: flex-end; }
   }
 
   @mixin top-right-block-width {
-    $top-right-outer-ratio: $top-right-outer / ($top-left-outer + $top-right-outer);
-
-    width: calc((100% - #{$top-inner-blocks-width}) * #{$top-right-outer-ratio);
+    width: calc((100% - #{$desktop-width}) / 2 + #{$top-right-outer});
 
     & .header__menu-link { justify-content: flex-start; }
   }
