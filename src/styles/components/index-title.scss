@@ -1,0 +1,97 @@
+@import "./_colors.scss";
+@import "./_variables.scss";
+@import "./_mixinis.scss";
+
+$outside-padding: 29px;
+
+.index-title {
+  // background-color: $light-grey;
+  background: $light-grey url('/img/hero-mobile.jpg') no-repeat 50% 20%;
+}
+
+.index-title__title-text {
+  color: #010000;
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  padding: $outside-padding;
+  padding-top: 76px;
+  text-align: center;
+  min-height: 283px;
+  border-top: $border;
+  margin: 0;
+}
+
+.index-title__feature {
+  display: block;
+  background-color: $green;
+  color: white;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  padding: 20px 36px;
+  vertical-align: top;
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:nth-of-type(2) { background-color: $mid-green; }
+}
+
+@media (min-width: $tablet-width) {
+  .index-title {
+    background-image: url('/img/hero-desktop-jpg.jpg');
+    background-position: 50% 50%;
+    position: relative;
+    padding-bottom: 12px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 34px;
+      background: transparent url("/img/bg-zigzag-fill.svg") repeat-x;
+    }
+  }
+
+  .index-title__features { display: flex; }
+
+  .index-title__title-text {
+    padding: 90px 135px 371px;
+    font-size: 43px;
+    line-height: 50px;
+    border-top: none;
+  }
+
+  .index-title__features {
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  .index-title__feature {
+    font-size: 20px;
+    line-height: 30px;
+    width: 50%;
+    padding-bottom: 47px;
+
+    & span { max-width: 120px; }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .index-title__title-text {
+    padding-left: 268px;
+    padding-right: 268px;
+    padding-bottom: 354px;
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 57px;
+  }
+
+  .index-title__features {
+    width: 1050px;
+  }
+}

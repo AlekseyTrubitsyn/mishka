@@ -17,6 +17,13 @@ $left-mobile-padding: 76px;
   justify-content: flex-start;
 }
 
+.header__menu.header__menu--expanded {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
 .header__menu-toggle {
   position: absolute;
   top: 15px;
