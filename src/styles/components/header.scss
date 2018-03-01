@@ -71,11 +71,10 @@ $left-mobile-padding: 76px;
 .header__menu-text {
   font-size: 17px;
   font-weight: bold;
-  line-height: 24px;
+  line-height: 38px;
 
   display: flex;
 
-  min-height: 78px;
   padding: $base-padding;
   padding-left: $left-mobile-padding;
 
@@ -99,7 +98,10 @@ $left-mobile-padding: 76px;
   justify-content: center;
 }
 
-.header__logo { display: none; }
+.header__logo {
+  display: none;
+  line-height: 1em;
+}
 
 .header__logo--mobile { display: block; }
 
@@ -150,10 +152,14 @@ $left-mobile-padding: 76px;
 
   .header__menu-item:nth-of-type(6) { flex-grow: 2; }
 
+  .header__menu-link,
+  .header__menu-text {
+  	padding: 25px 20px;
+  }
+
   .header__menu-item:nth-of-type(1) .header__menu-link,
   .header__menu-item:nth-of-type(4) .header__menu-link,
   .header__menu-item:nth-of-type(5) .header__menu-link {
-    min-height: 88px;
     align-items: center;
   }
 
@@ -168,9 +174,11 @@ $left-mobile-padding: 76px;
   .header__menu-item:nth-of-type(3) .header__menu-link,
   .header__menu-item:nth-of-type(6) .header__menu-text {
     display: flex;
-    padding: 25px 18px;
+    padding: 11px 18px;
     font-size: 15px;
   }
+
+  .header__menu-item:nth-of-type(6) .header__menu-text { justify-content: flex-end; }
 
   .header__menu-toggle { display: none; }
 
@@ -180,7 +188,7 @@ $left-mobile-padding: 76px;
   }
 
   .header__menu-link--logo {
-    padding: 22px 209px 14px 48px;
+    padding: 22px 209px 18px 48px;
     justify-content: flex-start;
   }
 
@@ -189,14 +197,13 @@ $left-mobile-padding: 76px;
 
   .header__menu-link--search {
     width: 82px;
-    padding-left: 20px;
+    padding: 35px 20px;
     justify-content: center;
   }
 
   .header__menu-link--search span {
     @include visually-hidden;
   }
-
 
   .header__menu-link--cart {
     padding-left: 80px;
@@ -244,10 +251,6 @@ $left-mobile-padding: 76px;
     display: inline-block;
   }
 
-  .header__menu-item {
-    flex-shrink: 0;
-  }
-
   .header__menu-item:nth-of-type(1) { order: 3; }
   .header__menu-item:nth-of-type(2) { order: 1; }
   .header__menu-item:nth-of-type(3) { order: 2; }
@@ -259,11 +262,15 @@ $left-mobile-padding: 76px;
 
   .header__menu-item:nth-of-type(8) { width: $top-inner-blocks-width; }
 
-  .header__menu-item:nth-of-type(2) { @include top-left-block-width; }
-  .header__menu-item:nth-of-type(5) { @include top-right-block-width; }
+  .header__menu-item:nth-of-type(2),
+  .header__menu-item:nth-of-type(7) {
+    @include top-left-block-width;
+  }
 
-  .header__menu-item:nth-of-type(7) { @include top-left-block-width; }
-  .header__menu-item:nth-of-type(6) { @include top-right-block-width; }
+  .header__menu-item:nth-of-type(5),
+  .header__menu-item:nth-of-type(6) {
+    @include top-right-block-width;
+  }
 
   .header__menu-item:nth-of-type(1),
   .header__menu-item:nth-of-type(2),
@@ -292,7 +299,7 @@ $left-mobile-padding: 76px;
   .header__menu-item:nth-of-type(3) .header__menu-link,
   .header__menu-item:nth-of-type(4) .header__menu-link {
     font-size: 17px;
-    min-height: 88px;
+    line-height: 38px;
   }
 
   .header__menu-item:nth-of-type(2) .header__menu-link,
@@ -300,7 +307,7 @@ $left-mobile-padding: 76px;
     padding: 25px 35px;
   }
 
-  .header__menu-item:nth-of-type(4) .header__menu-link { padding: 20px; }
+  .header__menu-item:nth-of-type(4) .header__menu-link { padding: 35px 20px; }
 
   .header__menu-item:nth-of-type(6),
   .header__menu-item:nth-of-type(7),
@@ -309,12 +316,14 @@ $left-mobile-padding: 76px;
     border-top: $border;
   }
 
-  .header__menu-item:nth-of-type(6) .header__menu-link,
+  .header__menu-item:nth-of-type(6) .header__menu-text,
   .header__menu-item:nth-of-type(7) .header__menu-link,
   .header__menu-item:nth-of-type(8) .header__menu-link {
-    padding: 20px 25px;
+    padding: 11px 25px;
     font-size: 15px;
   }
+
+  .header__menu-item:nth-of-type(6) .header__menu-text { justify-content: flex-start; }
 
   .header__menu-item:nth-of-type(2) .header__menu-link,
   .header__menu-item:nth-of-type(7) .header__menu-link {
@@ -335,7 +344,7 @@ $left-mobile-padding: 76px;
   }
 
   .header__menu-link--cart {
-  	padding-left: 83px;
+    padding: 25px $outside-padding 25px 83px;
   }
 
   .header__menu-item:nth-of-type(6) .header__menu-text {
