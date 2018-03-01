@@ -9,6 +9,8 @@ html
     link(href="styles/normalize.css" rel="stylesheet" type="text/css")
     link(href="styles/style.css" rel="stylesheet" type="text/css")
     script(src="picturefill.min.js" async)
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script(src="map-script.js" type="text/javascript")
   body
     include _svg-sprite.pug
     include components/header.pug
@@ -16,5 +18,6 @@ html
     include components/index-hit.pug
     include components/index-about.pug
     include components/index-reviews.pug
+    include components/index-contacts.pug
     include components/footer.pug
     script(src="script.js")
