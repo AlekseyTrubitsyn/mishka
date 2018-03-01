@@ -1,0 +1,81 @@
+@import "./_colors.scss";
+@import "./_variables.scss";
+@import "./_mixinis.scss";
+
+.index-about .container {
+  padding: 30px $mobile-outside-padding;
+}
+
+.index-about__title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.index-about__item {
+  font-size: 17px;
+  font-weight: 700;
+
+  display: inline-block;
+  flex-direction: column;
+
+  margin-bottom: 30px;
+}
+
+.index-about-item__svg-container {
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+  height: 40px;
+  margin-bottom: 17px;
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .index-about__list {
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .index-about__item {
+    width: 300px;
+    font-size: 20px;
+  }
+
+  .index-about__item--eco { order: 1; }
+  .index-about__item--price { order: 3; }
+  .index-about__item--likes { order: 2; }
+  .index-about__item--handmade { order: 5; }
+  .index-about__item--native { order: 4; }
+  .index-about__item--packaging { order: 6; }
+}
+
+@media (min-width: $desktop-width) {
+  $side-padding: $outside-padding + $desktop-left-padding;
+
+  .index-about .container {
+    width: $desktop-width;
+    padding: 65px $side-padding 27px;
+  }
+
+  .index-about__title { margin-bottom: 47px; }
+
+  .index-about__item {
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,49 @@
+mixin image(width, height, id)
+  li.index-about__item.index-about__item--eco
+    .index-about-item__svg-container
+      svg(dimensions)
+        use(xlink:href=id)
+
+//- (width="31.972" height="37.301"
+//- (width="34.373" height="34.373"
+//- (width="46.575" height="27.332"
+//- (width="54.156" height="23.183"
+//- (width="33.05" height="27.857"
+//- (width="32.666" height="32.486"
+
+.index-about
+  .container
+    h2.index-about__title Коротко о нас:
+    ul.index-about__list
+      li.index-about__item.index-about__item--eco
+        .index-about-item__svg-container
+          svg(width="31.972" height="37.301")
+            use(xlink:href="#icon-feature-1")
+        span Экологически чистые&nbsp;материалы
+      li.index-about__item.index-about__item--price
+        .index-about-item__svg-container
+          svg(width="46.575" height="27.332")
+            use(xlink:href="#icon-feature-3")
+        span Скандинавский стиль по&nbsp;российской цене
+      li.index-about__item.index-about__item--likes
+        .index-about-item__svg-container
+          svg(width="33.05" height="27.857")
+            use(xlink:href="#icon-feature-5")
+        span Увеличивает лайки на&nbsp;фотографиях
+      li.index-about__item.index-about__item--handmade
+        .index-about-item__svg-container
+          svg(width="34.373" height="34.373")
+            use(xlink:href="#icon-feature-2")
+        span Связано вручную с любовью&nbsp;и&nbsp;умилением
+      li.index-about__item.index-about__item--native
+        .index-about-item__svg-container
+          svg(width="54.156" height="23.183")
+            use(xlink:href="#icon-feature-4")
+        span Поддержка отечественного производителя
+      li.index-about__item.index-about__item--packaging
+        .index-about-item__svg-container
+          svg(width="32.666" height="32.486")
+            use(xlink:href="#icon-feature-6")
+        span Поставляется в подарочной&nbsp;упаковке
+
+      
