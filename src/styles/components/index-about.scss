@@ -43,6 +43,16 @@
 }
 
 @media (min-width: $tablet-width) {
+  .index-about .container {
+    padding: 53px $outside-padding 20px;
+  }
+
+  .index-about__title {
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+
   .index-about__list {
     display: flex;
     flex-direction: row;
@@ -67,6 +77,12 @@
 
 @media (min-width: $desktop-width) {
   $side-padding: $outside-padding + $desktop-left-padding;
+
+  .index-about__title {
+    font-size: 53px;
+    font-weight: 700;
+    line-height: 57px;
+  }
 
   .index-about .container {
     width: $desktop-width;
