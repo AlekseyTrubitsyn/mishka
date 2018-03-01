@@ -5,6 +5,7 @@
 @import "./components/footer.scss";
 
 @import "./components/index-title.scss";
+@import "./components/index-hit.scss";
 
 * { box-sizing: border-box; }
 
@@ -13,6 +14,13 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+img,
+picture {
+  width: 100%;
+  height: auto;
+  line-height: 1em;
 }
 
 .visually-hidden {

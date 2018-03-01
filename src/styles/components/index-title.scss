@@ -2,10 +2,7 @@
 @import "./_variables.scss";
 @import "./_mixinis.scss";
 
-$outside-padding: 29px;
-
 .index-title {
-  // background-color: $light-grey;
   background: $light-grey url('/img/hero-mobile.jpg') no-repeat 50% 20%;
 }
 
@@ -14,7 +11,7 @@ $outside-padding: 29px;
   font-size: 27px;
   font-weight: 700;
   line-height: 30px;
-  padding: $outside-padding;
+  padding: $mobile-outside-padding;
   padding-top: 76px;
   text-align: center;
   min-height: 283px;

@@ -8,9 +8,11 @@ html
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     link(href="styles/normalize.css" rel="stylesheet" type="text/css")
     link(href="styles/style.css" rel="stylesheet" type="text/css")
+    script(src="picturefill.min.js" async)
   body
     include _svg-sprite.pug
     include components/header.pug
     include components/index-title.pug
+    include components/index-hit.pug
     include components/footer.pug
     script(src="script.js")
