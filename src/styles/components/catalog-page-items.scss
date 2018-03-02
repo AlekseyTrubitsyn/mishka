@@ -80,6 +80,11 @@
 }
 
 @media (min-width: $tablet-width) {
+  .catalog-page-items .container {
+    padding-left: $outside-padding;
+    padding-right: $outside-padding;
+  }
+
   .catalog-page-item {
     flex-direction: row;
     height: 334px;
@@ -122,8 +127,8 @@
 
   .catalog-page-items__list {
     display: flex;
-    justify-content: center;
-    align-items: stretch;
+    justify-content: space-between;
+    // align-items: stretch;
   }
 
   .catalog-page-item {
@@ -131,7 +136,7 @@
 
     width: 316px;
     height: auto;
-    margin: 26px;
+    margin: 26px 0;
 
     vertical-align: top;
 

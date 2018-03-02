@@ -1,0 +1,15 @@
+.catalog-page-production
+  .container
+    .catalog-page-production__header
+      svg(width="33" height="32")
+        use(xlink:href="#icon-video")
+      h2.catalog-page-production__title Процесс производства
+    .catalog-page-production__video
+      picture
+        source(srcset="./img/production-video/video-mobile@1x.jpg, ./img/production-video/video-mobile@2x.jpg 2x" media="(max-width: 767px)")
+        source(srcset="./img/production-video/video-tablet@1x.jpg, ./img/production-video/video-tablet@2x.jpg 2x" media="(max-width: 1149px)")
+        img(src="./img/production-video/video-desktop@1x.jpg" srcset="./img/production-video/video-desktop@1x.jpg, ./img/production-video/video-desktop@2x.jpg 2x" media="(max-width: 1149px)" alt="Процесс производства")
+      svg(width="101" height="77")
+        use(xlink:href="#icon-play")
+    p.catalog-page-production__description По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+    button.catalog-page-production__order-button Сделать заказ
