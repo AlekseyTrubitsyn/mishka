@@ -1,5 +1,3 @@
--var menuItems_desktop = [{ "name": "Новые поступления", "url": "#" },{ "name": "Распродажа", "url": "#" }];
-
 header.header
   nav
     ul#menu.header__menu
@@ -17,22 +15,23 @@ header.header
             use(xlink:href="#icon-menu-close")
           svg(width="19.958" height="14").header__toggle-open
             use(xlink:href="#icon-menu-open")
-      li.header__menu-item
-          a.header__menu-link(href="catalog.html") Каталог товаров
-      li.header__menu-item
-          a.header__menu-link(href="order.html") Вязание на заказ
+      li.header__menu-item.header__menu-item--catalog
+        a.header__menu-link.header__menu-link--catalog(href="catalog.html") Каталог товаров
+      li.header__menu-item.header__menu-item--order
+        a.header__menu-link.header__menu-link--order(href="order.html") Вязание на заказ
       li.header__menu-item.header__menu-item--search
         a.header__menu-link.header__menu-link--search(href="#")
           span Поиск по сайту
           svg(width="18" height="18").header__search-icon
             use(xlink:href="#icon-search")
-      li.header__menu-item
+      li.header__menu-item.header__menu-item--cart
         a.header__menu-link.header__menu-link--cart(href="#") Корзина: пока пуста
-      li.header__menu-item.header__menu-item--tablet
-        span.header__menu-text Бесплатная доставка по России
-      each val in menuItems_desktop
-        li.header__menu-item.header__menu-item--desktop
-          a.header__menu-link(href=val.url)= val.name
+      li.header__menu-item.header__menu-item--shiping.header__menu-item--tablet
+        span.header__menu-text.header__menu-text--shiping Бесплатная доставка по России
+      li.header__menu-item.header__menu-item--new.header__menu-item--desktop
+          a.header__menu-link.header__menu-link--new(href="#") Новые поступления
+      li.header__menu-item.header__menu-item--sale.header__menu-item--desktop
+          a.header__menu-link.header__menu-link--sale(href="#") Распродажа
         
  
           

@@ -5,6 +5,7 @@
 .catalog-page-header {
   background: $mid-light-grey;
   text-align: center;
+  position: relative;
 }
 
 .catalog-page-header .container {
@@ -16,4 +17,33 @@
   font-weight: 700;
   line-height: 30px;
   margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-page-header::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 34px;
+    content: '';
+    background: transparent url("/img/bg-zigzag-fill.svg") repeat-x;
+  }
+
+  .catalog-page-header .container {
+    padding-top: 33px;
+    padding-bottom: 100px;
+  }
+  .catalog-page-header__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-page-header__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-bottom: 120px;
+  }
 }
