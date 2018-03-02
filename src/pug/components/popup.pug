@@ -1,0 +1,18 @@
+.popup#popup.hide
+  a(href="#")#popup-close.popup__close-button
+    svg(width="20.514" height="20.512")
+      use(xlink:href="#icon-menu-close")      
+  .popup__title Добавить в корзину
+  p.popup__subtitle Выберите размер:
+  form(id="popup-form" class="popup__form" action="#" method="POST")
+    input.popup__size-input(type="radio" name="size" id="size-s" value="size-s" checked)
+    label.popup__size-selector(for="size-s")
+      span S
+    input.popup__size-input(type="radio" name="size" id="size-m" value="size-m")
+    label.popup__size-selector(for="size-m")
+      span M
+    input.popup__size-input(type="radio" name="size" id="size-l" value="size-l")
+    label.popup__size-selector(for="size-l")
+      span L
+    input(type="submit" value="ДОБАВИТЬ").popup__submit
+#popup-overlay.popup__overlay.hide

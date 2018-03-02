@@ -3,6 +3,7 @@
 @import "./_mixinis.scss";
 @import "./components/header.scss";
 @import "./components/footer.scss";
+@import "./components/popup.scss";
 
 @import "./components/index-title.scss";
 @import "./components/index-hit.scss";
@@ -26,13 +27,11 @@ picture {
   line-height: 1em;
 }
 
-.visually-hidden {
-  @include visually-hidden;
-}
+.visually-hidden { @include visually-hidden; }
 
-.container {
-  width: 100%;
-}
+.container { width: 100%; }
+
+.hide { display: none; }
 
 svg { color: black; }
 

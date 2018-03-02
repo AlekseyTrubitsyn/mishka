@@ -7,59 +7,74 @@
 }
 
 .index-title__title-text {
-  color: #010000;
   font-size: 27px;
   font-weight: 700;
   line-height: 30px;
+
+  min-height: 283px;
+  margin: 0;
   padding: $mobile-outside-padding;
   padding-top: 76px;
+
   text-align: center;
-  min-height: 283px;
+
+  color: #010000;
   border-top: $border;
-  margin: 0;
 }
 
 .index-title__feature {
-  display: block;
-  background-color: $green;
-  color: white;
-  font-weight: bold;
   font-size: 19px;
+  font-weight: bold;
   line-height: 24px;
+
+  display: block;
+  display: flex;
+
   padding: 20px 36px;
+
   vertical-align: top;
   text-decoration: none;
-  display: flex;
+
+  color: white;
+  background-color: $green;
+
   justify-content: space-between;
   align-items: center;
 
   &:nth-of-type(2) { background-color: $mid-green; }
+
+  &:hover { transform: translateY(-5px); }
+  &:active * { opacity: 0.3; }
 }
 
 @media (min-width: $tablet-width) {
   .index-title {
-    background-image: url('/img/hero-desktop-jpg.jpg');
-    background-position: 50% 50%;
     position: relative;
+
     padding-bottom: 12px;
 
+    background-image: url('/img/hero-desktop-jpg.jpg');
+    background-position: 50% 50%;
+
     &::after {
-      content: "";
       position: absolute;
-      left: 0;
       right: 0;
       bottom: 0;
+      left: 0;
+
       height: 34px;
-      background: transparent url("/img/bg-zigzag-fill.svg") repeat-x;
-    }
+
+      content: '';
+
+      background: transparent url('/img/bg-zigzag-fill.svg') repeat-x;    }
   }
 
   .index-title__features { display: flex; }
 
   .index-title__title-text {
-    padding: 90px 135px 371px;
     font-size: 43px;
     line-height: 50px;
+    padding: 90px 135px 371px;
     border-top: none;
   }
 
@@ -71,6 +86,7 @@
   .index-title__feature {
     font-size: 20px;
     line-height: 30px;
+
     width: 50%;
     padding-bottom: 47px;
 
@@ -80,12 +96,13 @@
 
 @media (min-width: $desktop-width) {
   .index-title__title-text {
-    padding-left: 268px;
-    padding-right: 268px;
-    padding-bottom: 354px;
     font-size: 53px;
     font-weight: 700;
     line-height: 57px;
+
+    padding-right: 268px;
+    padding-bottom: 354px;
+    padding-left: 268px;
   }
 
   .index-title__features {
