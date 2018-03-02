@@ -1,0 +1,19 @@
+@import "./_colors.scss";
+@import "./_variables.scss";
+@import "./_mixinis.scss";
+
+.catalog-page-header {
+  background: $mid-light-grey;
+  text-align: center;
+}
+
+.catalog-page-header .container {
+  padding: 70px $mobile-outside-padding - 6px;
+}
+
+.catalog-page-header__title {
+  font-size: 27px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+}
