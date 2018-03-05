@@ -17,13 +17,15 @@ $left-mobile-padding: 76px;
   flex-wrap: wrap;
   justify-content: flex-start;
   z-index: 100;
+  position: fixed;
+  width: 100%;
 }
 
 .header__menu.header__menu--expanded {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .header__menu-toggle {
@@ -65,7 +67,8 @@ $left-mobile-padding: 76px;
 
 .header__menu-item {
   display: none;
-  background: $grey linear-gradient(to bottom, $grey 0, white 100%);
+  background: white;
+  border-bottom: $border;
 }
 
 .header__menu-item--logo { display: block; }
@@ -122,7 +125,12 @@ $left-mobile-padding: 76px;
     background: white;
   }
 
-  .header__menu { flex-direction: row; }
+  .header__menu {
+    position: static;
+    flex-direction: row;
+  }
+
+  .header__menu-item { border: none; }
 
   .header__menu-item,
   .header__menu-item--tablet,
@@ -151,7 +159,8 @@ $left-mobile-padding: 76px;
     border-top: $border;
   }
 
-  .catalog-page-body {
+  .catalog-page-body,
+  .form-page-body {
       & .header__menu-item--catalog,
       & .header__menu-item--order,
       & .header__menu-item--shiping {
@@ -284,7 +293,9 @@ $left-mobile-padding: 76px;
   .header__menu-item--search,
   .header__menu-item--cart,
   .catalog-page-body .header__menu-item--catalog,
-  .catalog-page-body .header__menu-item--order {
+  .catalog-page-body .header__menu-item--order,
+  .form-page-body .header__menu-item--catalog,
+  .form-page-body .header__menu-item--order {
     background: white;
     border: none;
     font-size: 17px;
@@ -298,7 +309,8 @@ $left-mobile-padding: 76px;
   .header__menu-item--order { width: 228px; }
   .header__menu-item--search { border-right: $border; }
 
-  .catalog-page-body {
+  .catalog-page-body,
+  .form-page-body {
     & .header__menu-item--shiping,
     & .header__menu-item--new,
     & .header__menu-item--sale {

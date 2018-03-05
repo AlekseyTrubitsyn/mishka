@@ -1,0 +1,322 @@
+.form-page__form-container {
+  padding: 25px $mobile-outside-padding 55px;
+
+  p { margin: 0; }
+
+  & input[type="checkbox"],
+  & input[type="radio"] {
+    display: none;
+  }
+}
+
+.form-page__text {
+  color: $dark-grey;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.form-page__fieldset {
+  margin-bottom: 16px;
+  padding: 22px 0 10px;
+  position: relative;
+  border: none;
+  border-top: 1px solid $green;
+
+  &:first-of-type { margin-top: 24px; }
+}
+
+.form-page__legend {
+  color: $green;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding-right: 30px;
+  background: white;
+}
+
+.form-page__label {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 18px;
+  display: block;
+  padding: 10px 0;
+  position: relative;
+  min-height: 50px;
+}
+
+.form-page__label--radio,
+.form-page__label--chekbox {
+  padding: 10px 30px 10px 62px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.form-page__label--radio::before,
+.form-page__label--chekbox::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  top: calc(50% - 20px);
+  left: 0;
+  border: 2px solid black;
+  position: absolute;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+.form-page__label--radio::before {
+  border-radius: 50%;
+}
+
+.form-page__input--radio:checked + .form-page__label--radio::before {
+  background-image: radial-gradient($green 0, $green 8px, white 0, white 100%);
+}
+
+.form-page__input--chekbox:checked + .form-page__label--chekbox::before {
+  background: url("/img/icon-tick.svg") center no-repeat;
+  background-size: 80%;
+}
+
+.form-page__text-input {
+  border: none;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid black;
+  padding: 8px 0;
+  line-height: 32px;
+  min-height: 52px;
+  width: 100%;
+  background-color: transparent;
+
+  color: $dark-grey;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.form-page__contacts-fieldset label {
+  position: relative;
+  display: block;
+
+  &:hover svg {
+    color: $green;
+    opacity: 1;
+  }
+
+  & svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(50%);
+    cursor: pointer;
+    opacity: 0.2;
+  }
+}
+
+.form-page__contacts-fieldset {
+  padding-top: 4px;
+  margin-bottom: 24px;
+}
+
+.form-page__label .form-page-name__subtitle {
+  margin-bottom: 10px;
+}
+
+.form-page__additional-fieldset {
+  padding-top: 40px;
+  margin-bottom: 2px;
+}
+
+.form-page__additional {
+  width: 100%;
+  border: 2px solid black;
+  color: $dark-grey;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 17px;
+}
+
+.form-page__submit-button {
+  @include ghost-button;
+
+  margin-top: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-page__form-container {
+    position: relative;
+    padding: 53px 0 $outside-padding;
+  }
+
+  .form-page__text {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .form-page__text--subtitle {
+    padding: 0 $outside-padding;
+  }
+
+  .form-page__fieldset {
+    padding: 60px $outside-padding 60px #{166px + $outside-padding};
+    margin: 0;
+    border: none;
+
+    &:first-of-type {
+      margin-top: 2px;
+      padding-top: 50px;
+      padding-bottom: 40px;
+
+      & legend { top: 70px; }
+    }
+  }
+
+  .form-page__legend {
+    position: absolute;
+    left: $outside-padding;
+    top: 80px;
+    background: transparent;
+    padding: 0;
+  }
+
+  .form-page__label {
+    font-size: 19px;
+    line-height: 18px;
+    min-height: 52px;
+    margin-bottom: 24px;
+  }
+
+  .form-page__label--radio::before,
+  .form-page__label--chekbox::before {
+    width: 52px;
+    height: 52px;
+  }
+
+  .form-page__input--radio:checked + .form-page__label--radio::before {
+    background-image: radial-gradient($green 0, $green 11px, white 11px, white 100%);
+  }
+
+  .form-page__label--radio,
+  .form-page__label--chekbox {
+    padding-left: 70px;
+  }
+
+  .form-page__label--chekbox {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 50%;
+  }
+
+  .form-page__colors-fieldset,
+  .form-page__contacts-fieldset {
+      background: $mid-light-grey;
+    }
+
+  .form-page__colors-fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 55px;
+  }
+
+  .form-page__name-fieldset {
+    padding-top: 37px;
+  }
+
+  .form-page__name-fieldset .form-page__legend {
+    top: 68px;
+  }
+
+  .form-page-name__label {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .form-page__label .form-page-name__subtitle {
+    margin: 0;
+    margin-right: 25px;
+  }
+
+  .form-page__contacts-fieldset--phone {
+    padding-top: 53px;
+    padding-bottom: 10px;
+  }
+
+  .form-page__contacts-fieldset--phone .form-page__legend {
+    top: 72px;
+  }
+
+  .form-page__contacts-fieldset--email {
+    padding-top: 14px;
+    padding-bottom: 67px;
+  }
+
+  .form-page__contacts-fieldset--email .form-page__legend {
+    top: 33px;
+  }
+
+  .form-page__additional-fieldset {
+    padding-top: 64px;
+    padding-bottom: 53px;
+  }
+
+  .form-page__form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 $outside-padding;
+  }
+
+  .form-page__submit-button {
+    width: 230px;
+    margin: 0;
+  }
+
+  .form-page__text--disclaimer {
+    margin-bottom: 0;
+    order: 2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  $desktop-outside-padding: 225px;
+
+  .form-page__form-container {
+    padding-top: 100px;
+    padding-bottom: 95px;
+  }
+
+  .form-page__text--subtitle,
+  .form-page__fieldset,
+  .form-page__form-footer {
+    padding-left: $desktop-outside-padding;
+    padding-right: $desktop-outside-padding;
+  }
+
+  .form-page__label--chekbox {
+    width: 33%;
+  }
+
+  .form-page__colors-fieldset {
+    padding-top: 55px;
+  }
+
+  .form-page__name-fieldset {
+    padding-top: 40px;
+    padding-bottom: 55px;
+  }
+
+  .form-page-name__label {
+    margin-bottom: 3px;
+  }
+
+  .form-page__contacts-fieldset--phone {
+    padding-top: 49px;
+  }
+
+  .form-page__additional-fieldset {
+    padding-bottom: 90px;
+  }
+}

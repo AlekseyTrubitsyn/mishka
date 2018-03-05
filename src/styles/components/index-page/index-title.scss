@@ -41,9 +41,11 @@
   justify-content: space-between;
   align-items: center;
 
-  &:nth-of-type(2) { background-color: $mid-green; }
+  &:hover { background-color: darken($green, 5%); }
 
-  &:hover { transform: translateY(-5px); }
+  &:nth-of-type(2) { background-color: $mid-green; }
+  &:nth-of-type(2):hover { background-color: darken($mid-green, 5%); }
+
   &:active * { opacity: 0.3; }
 }
 
@@ -91,6 +93,8 @@
     padding-bottom: 47px;
 
     & span { max-width: 120px; }
+
+    &:hover { transform: translateY(-5px); }
   }
 }
 

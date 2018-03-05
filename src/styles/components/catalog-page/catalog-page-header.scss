@@ -20,14 +20,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .catalog-page-header::after {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    height: 34px;
-    content: '';
-    background: transparent url("/img/bg-zigzag-fill.svg") repeat-x;
+  .catalog-page-header {
+      @include zig-zag-fill-border;
   }
 
   .catalog-page-header .container {

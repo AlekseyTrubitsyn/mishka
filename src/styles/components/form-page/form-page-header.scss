@@ -1,0 +1,19 @@
+@import "./_colors.scss";
+@import "./_variables.scss";
+@import "./_mixinis.scss";
+
+.form-page-header {
+  background: $mid-light-grey;
+  text-align: center;
+  position: relative;
+}
+
+.form-page-header .container {
+  padding: 70px $mobile-outside-padding - 6px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-page-header {
+      @include zig-zag-fill-border;
+  }
+}
