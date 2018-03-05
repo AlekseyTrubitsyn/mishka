@@ -1,0 +1,23 @@
+doctype html
+
+html
+  head
+    title Mishka
+    meta(charset='utf-8')
+    meta(name='author' content='Aleksey Trubitsyn')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(href="styles/normalize.css" rel="stylesheet" type="text/css")
+    link(href="styles/style.css" rel="stylesheet" type="text/css")
+    script(src="picturefill.min.js" async)
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script(src="map-script.js" type="text/javascript")
+  body.form-page-body
+    include _svg-sprite.pug
+    include components/header.pug
+
+    include components/form-page/header.pug
+    include components/form-page/form.pug
+      
+    include components/footer.pug
+    include components/popup.pug
+    script(src="script.js")

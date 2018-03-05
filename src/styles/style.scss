@@ -5,15 +5,18 @@
 @import "./components/footer.scss";
 @import "./components/popup.scss";
 
-@import "./components/index-title.scss";
-@import "./components/index-hit.scss";
-@import "./components/index-about.scss";
-@import "./components/index-reviews.scss";
-@import "./components/index-contacts.scss";
+@import "./components/index-page/index-title.scss";
+@import "./components/index-page/index-hit.scss";
+@import "./components/index-page/index-about.scss";
+@import "./components/index-page/index-reviews.scss";
+@import "./components/index-page/index-contacts.scss";
 
-@import "./components/catalog-page-header.scss";
-@import "./components/catalog-page-items.scss";
-@import "./components/catalog-page-production.scss";
+@import "./components/catalog-page/catalog-page-header.scss";
+@import "./components/catalog-page/catalog-page-items.scss";
+@import "./components/catalog-page/catalog-page-production.scss";
+
+@import "./components/form-page/form-page-header.scss";
+@import "./components/form-page/form.scss";
 
 * { box-sizing: border-box; }
 

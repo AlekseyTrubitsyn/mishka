@@ -69,3 +69,15 @@ $border: 1px solid $mid-grey;
     background-size: auto 7px;
   }
 }
+
+@mixin zig-zag-fill-border {
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 34px;
+    content: '';
+    background: transparent url("/img/bg-zigzag-fill.svg") repeat-x;
+  }
+}
