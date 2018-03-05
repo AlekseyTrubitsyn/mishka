@@ -106,9 +106,9 @@
 
   & svg {
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 0;
-    transform: translateY(50%);
+    transform: translateY(-50%);
     cursor: pointer;
     opacity: 0.2;
   }
@@ -117,6 +117,10 @@
 .form-page__contacts-fieldset {
   padding-top: 4px;
   margin-bottom: 24px;
+}
+
+.form-page__contacts-fieldset .form-page__text-input {
+  padding-right: 40px;
 }
 
 .form-page__label .form-page-name__subtitle {
@@ -192,6 +196,11 @@
   .form-page__label--chekbox::before {
     width: 52px;
     height: 52px;
+  }
+
+  .form-page__text-input {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .form-page__input--radio:checked + .form-page__label--radio::before {
